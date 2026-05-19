@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube Clone</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial;
+    }
+
+    body{
+      background:#0f0f0f;
+      color:white;
+    }
+
+    /* Navbar */
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 25px;
+      background:#202020;
+      position:sticky;
+      top:0;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:red;
+    }
+
+    .search-box{
+      width:50%;
+      display:flex;
+    }
+
+    .search-box input{
+      width:100%;
+      padding:10px;
+      border:none;
+      outline:none;
+      border-radius:20px 0 0 20px;
+      background:#121212;
+      color:white;
+    }
+
+    .search-box button{
+      padding:10px 20px;
+      border:none;
+      background:red;
+      color:white;
+      border-radius:0 20px 20px 0;
+      cursor:pointer;
+    }
+
+    /* Videos */
+    .videos{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:20px;
+      padding:20px;
+    }
+
+    .card{
+      background:#202020;
+      border-radius:15px;
+      overflow:hidden;
+      transition:0.3s;
+      cursor:pointer;
+    }
+
+    .card:hover{
+      transform:scale(1.03);
+    }
+
+    .card img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:15px;
+    }
+
+    .card-content h3{
+      margin-bottom:10px;
+      font-size:18px;
+    }
+
+    .card-content p{
+      color:#aaa;
+      font-size:14px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">YouTube</div>
+
+    <div class="search-box">
+      <input type="text" placeholder="Video qidirish...">
+      <button>Qidir</button>
+    </div>
+  </div>
+
+  <!-- Videos -->
+  <div class="videos">
+
+    <div class="card">
+      <img src="https://picsum.photos/500/300?1">
+      <div class="card-content">
+        <h3>Gaming Video</h3>
+        <p>1M views • 2 days ago</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/500/300?2">
+      <div class="card-content">
+        <h3>Funny Moments</h3>
+        <p>850K views • 5 days ago</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/500/300?3">
+      <div class="card-content">
+        <h3>Music Video</h3>
+        <p>2M views • 1 week ago</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/500/300?4">
+      <div class="card-content">
+        <h3>Programming Lesson</h3>
+        <p>300K views • 3 days ago</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
